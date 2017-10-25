@@ -26,7 +26,7 @@ public class RobotServiceImpl implements RobotService {
                 .mapToObj(c -> Direction.getDirection(String.valueOf((char)c)))
                 .forEach(this::walk);
 
-        return this.navigationService.getCurrentLocation();
+        return this.navigationService.finish();
     }
 
 

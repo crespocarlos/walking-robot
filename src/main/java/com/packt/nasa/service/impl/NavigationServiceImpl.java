@@ -26,7 +26,7 @@ public class NavigationServiceImpl implements NavigationService {
     }
 
     @Override
-    public Point getCurrentLocation() {
+    public Point finish() {
         int finalX = point.getX() - START_X;
         int finalY = point.getY() - START_Y;
 

@@ -45,7 +45,7 @@ public class RobotServiceTest {
         voidAnswer.when(this.navigationService).changeLocation();
         voidAnswer.when(this.navigationService).start();
 
-        when(this.navigationService.getCurrentLocation())
+        when(this.navigationService.finish())
                 .thenReturn(new Point(0, 0, CardinalPoint.NORTH));
     }
 

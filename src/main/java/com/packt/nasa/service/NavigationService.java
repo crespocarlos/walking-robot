@@ -8,7 +8,7 @@ public interface NavigationService {
      * get the current location
      * @return Point with coordinates
      */
-    Point getCurrentLocation();
+    Point finish();
 
     /**
      * change the current location based on the cardinal point

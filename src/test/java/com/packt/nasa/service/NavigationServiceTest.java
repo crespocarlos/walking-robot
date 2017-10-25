@@ -89,7 +89,7 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.NORTH);
         service.changeLocation();
 
-        Point result = service.getCurrentLocation();
+        Point result = service.finish();
         assertEquals(0, result.getX());
         assertEquals(1, result.getY());
         assertEquals(CardinalPoint.NORTH, result.getCardinalPoint());
@@ -100,7 +100,7 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.SOUTH);
         service.changeLocation();
 
-        Point result = service.getCurrentLocation();
+        Point result = service.finish();
         assertEquals(0, result.getX());
         assertEquals(-1, result.getY());
         assertEquals(CardinalPoint.SOUTH, result.getCardinalPoint());
@@ -111,7 +111,7 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.WEST);
         service.changeLocation();
 
-        Point result = service.getCurrentLocation();
+        Point result = service.finish();
         assertEquals(1, result.getX());
         assertEquals(0, result.getY());
         assertEquals(CardinalPoint.WEST, result.getCardinalPoint());
@@ -122,7 +122,7 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.EAST);
         service.changeLocation();
 
-        Point result = service.getCurrentLocation();
+        Point result = service.finish();
         assertEquals(-1, result.getX());
         assertEquals(0, result.getY());
         assertEquals(CardinalPoint.EAST, result.getCardinalPoint());

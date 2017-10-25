@@ -31,7 +31,6 @@ public class Point {
         this.cardinalPoint = cardinalPoint;
     }
 
-
     public Point(int x, int y, CardinalPoint cardinalPoint) {
         this.x = x;
         this.y = y;
