@@ -47,6 +47,7 @@ public class RobotServiceTest {
 
         voidAnswer.when(this.navigationService).changeCardinalPoint(any(Direction.class));
         voidAnswer.when(this.navigationService).changeLocation();
+        voidAnswer.when(this.navigationService).start();
 
         when(this.navigationService.getCurrentLocation())
                 .thenReturn(new Point(0, 0, CardinalPoint.NORTH));

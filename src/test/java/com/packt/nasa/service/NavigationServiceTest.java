@@ -4,6 +4,7 @@ import com.packt.nasa.domain.Point;
 import com.packt.nasa.domain.enums.CardinalPoint;
 import com.packt.nasa.domain.enums.Direction;
 import com.packt.nasa.service.impl.NavigationServiceImpl;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -17,6 +18,11 @@ import static org.junit.Assert.assertFalse;
 public class NavigationServiceTest {
     @InjectMocks
     NavigationServiceImpl service;
+
+    @Before
+    public void before() {
+        service.start();
+    }
 
     @Test
     public void shouldReturnOutOfBoundariesBiggerThanNine() {
@@ -37,13 +43,13 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.NORTH);
 
         service.changeCardinalPoint(Direction.RIGHT);
-        assertEquals(CardinalPoint.WEST, service.point.getCardinalPoint());
+        assertEquals(CardinalPoint.EAST, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.RIGHT);
         assertEquals(CardinalPoint.SOUTH, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.RIGHT);
-        assertEquals(CardinalPoint.EAST, service.point.getCardinalPoint());
+        assertEquals(CardinalPoint.WEST, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.RIGHT);
         assertEquals(CardinalPoint.NORTH, service.point.getCardinalPoint());
@@ -54,13 +60,13 @@ public class NavigationServiceTest {
         service.point.setCardinalPoint(CardinalPoint.NORTH);
 
         service.changeCardinalPoint(Direction.LEFT);
-        assertEquals(CardinalPoint.EAST, service.point.getCardinalPoint());
+        assertEquals(CardinalPoint.WEST, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.LEFT);
         assertEquals(CardinalPoint.SOUTH, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.LEFT);
-        assertEquals(CardinalPoint.WEST, service.point.getCardinalPoint());
+        assertEquals(CardinalPoint.EAST, service.point.getCardinalPoint());
 
         service.changeCardinalPoint(Direction.LEFT);
         assertEquals(CardinalPoint.NORTH, service.point.getCardinalPoint());

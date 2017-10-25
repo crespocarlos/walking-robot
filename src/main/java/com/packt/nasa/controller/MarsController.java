@@ -18,7 +18,7 @@ public class MarsController {
     @Autowired
     public RobotService robotService;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/mars/{coordinates}")
+    @RequestMapping(method = RequestMethod.POST, path = "/mars/{coordinates}")
     public Point getByCoordinates(@PathVariable("coordinates") final String coordinates) {
         return this.robotService.walk(coordinates);
     }

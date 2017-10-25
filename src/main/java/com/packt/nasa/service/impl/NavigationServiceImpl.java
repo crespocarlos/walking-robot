@@ -70,25 +70,25 @@ public class NavigationServiceImpl implements NavigationService {
         switch (directionTo) {
             case LEFT:
                 if (this.point.getCardinalPoint() == CardinalPoint.NORTH) {
-                    this.point.setCardinalPoint(CardinalPoint.EAST);
-                } else if (this.point.getCardinalPoint() == CardinalPoint.SOUTH) {
                     this.point.setCardinalPoint(CardinalPoint.WEST);
+                } else if (this.point.getCardinalPoint() == CardinalPoint.SOUTH) {
+                    this.point.setCardinalPoint(CardinalPoint.EAST);
                 } else if (this.point.getCardinalPoint() == CardinalPoint.WEST) {
-                    this.point.setCardinalPoint(CardinalPoint.NORTH);
-                } else if (this.point.getCardinalPoint() == CardinalPoint.EAST) {
                     this.point.setCardinalPoint(CardinalPoint.SOUTH);
+                } else if (this.point.getCardinalPoint() == CardinalPoint.EAST) {
+                    this.point.setCardinalPoint(CardinalPoint.NORTH);
                 }
 
                 break;
             case RIGHT:
                 if (this.point.getCardinalPoint() == CardinalPoint.NORTH) {
-                    this.point.setCardinalPoint(CardinalPoint.WEST);
-                } else if (this.point.getCardinalPoint() == CardinalPoint.SOUTH) {
                     this.point.setCardinalPoint(CardinalPoint.EAST);
+                } else if (this.point.getCardinalPoint() == CardinalPoint.SOUTH) {
+                    this.point.setCardinalPoint(CardinalPoint.WEST);
                 } else if (this.point.getCardinalPoint() == CardinalPoint.WEST) {
-                    this.point.setCardinalPoint(CardinalPoint.SOUTH);
-                } else if (this.point.getCardinalPoint() == CardinalPoint.EAST) {
                     this.point.setCardinalPoint(CardinalPoint.NORTH);
+                } else if (this.point.getCardinalPoint() == CardinalPoint.EAST) {
+                    this.point.setCardinalPoint(CardinalPoint.SOUTH);
                 }
 
                 break;
