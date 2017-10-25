@@ -1,14 +1,11 @@
 package com.packt.nasa.service.impl;
 
-import com.google.common.base.Strings;
 import com.packt.nasa.domain.Point;
 import com.packt.nasa.domain.enums.CardinalPoint;
 import com.packt.nasa.domain.enums.Direction;
 import com.packt.nasa.service.NavigationService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.Objects;
 
 @Service
@@ -18,7 +15,6 @@ public class NavigationServiceImpl implements NavigationService {
     private static final int START_X = WIDTH / 2;
     private static final int START_Y = HEIGHT / 2;
     public Point point;
-
 
     public boolean isInBoundaries() {
         return point.getX() < WIDTH && point.getY() < HEIGHT && point.getX() >= 0 && point.getY() >= 0;
