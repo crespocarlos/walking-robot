@@ -1,0 +1,14 @@
+.classpath
+*.iml
+/nasaproject.iml
+/target/
+.project
+*.ipr
+*.iws
+*.log
+
+# IntelliJ
+/out/
+/build/
+.idea/
+.settings/
